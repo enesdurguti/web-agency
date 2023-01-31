@@ -17,157 +17,51 @@ body {
     color: #5e62d1;
 }
 
-.blurry-backround {
-    background: rgba(255, 255, 255, 0.178);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-}
-
-.menu-container {
-    width: 0%;
-    transition: all .3s ease-out;
-}
-
-.menu-container.active {
-    width: 100%;
-}
-
-.half-circle {
-    /* animation: halfCircle 1.5s infinite; */
-}
-
-@keyframes halfCircle {
-    0% {
-        transform: rotate(0deg);
-        transform-origin: top;
-    }
-
-    100% {
-        transform: rotate(180deg);
-    }
-}
-
 .vertical-text {
     writing-mode: vertical-rl;
     text-orientation: mixed;
 }
 
-.letter {
-    display: inline-block;
+.astronaut-image {
+    animation: astronaut 10s linear alternate infinite;
 }
 
-.letter {
-    transition: .3s ease-out;
+@keyframes astronaut {
+    0% {
+        transform: translateY(-50px);
+    }
+
+    50% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(50px);
+    }
 }
 
-.fancy:hover>.letter:nth-of-type(1) {
-    transform: translate(-80%, 60%) rotate(8deg);
+.services-section-image.is-intersecting {
+    width: 400px;
 }
 
-.fancy:hover>.letter:nth-of-type(2) {
-    transform: translate(-40%, 20%) rotate(4deg);
+.active-services-image {
+    animation: showServicesImage 400ms cubic-bezier(0.87, 0, 0.13, 1) forwards;
+    animation-delay: 200ms;
 }
 
-.fancy:hover>.letter:nth-of-type(3) {
-    transform: translate(-10%, 60%) rotate(-6deg);
+@keyframes showServicesImage {
+    from {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 100;
+        transform: scale(1.1);
+    }
 }
 
-.fancy:hover>.letter:nth-of-type(4) {
-    transform: translate(0%, 8%) rotate(-8deg);
-}
 
-.fancy:hover>.letter:nth-of-type(5) {
-    transform: translate(0%, -20%) rotate(5deg);
-}
-
-.fancy:hover>.letter:nth-of-type(6) {
-    transform: translate(0%, 20%) rotate(-3deg);
-}
-
-.fancy:hover>.letter:nth-of-type(7) {
-    transform: translate(0%, -40%) rotate(-5deg);
-}
-
-.fancy:hover>.letter:nth-of-type(8) {
-    transform: translate(0%, 15%) rotate(10deg);
-}
-
-.fancy:hover>.letter:nth-of-type(9) {
-    transform: translate(0%, -50%) rotate(8deg);
-}
-
-.fancy:hover>.letter:nth-of-type(10) {
-    transform: translate(0%, 15%) rotate(-6deg);
-}
-
-.fancy:hover>.letter:nth-of-type(11) {
-    transform: translate(50%, -10%) rotate(-3deg);
-}
-
-.fancy:hover>.letter:nth-of-type(12) {
-    transform: translate(120%, -30%) rotate(-10deg);
-}
-
-.fancy:hover>.letter:nth-of-type(13) {
-    transform: translate(120%, 30%) rotate(10deg);
-}
-
-.fancy:hover>.letter:nth-of-type(14) {
-    transform: translate(120%, -30%) rotate(-10deg);
-}
-
-.fancy:hover>.letter:nth-of-type(15) {
-    transform: translate(-80%, 60%) rotate(8deg);
-}
-
-.fancy:hover>.letter:nth-of-type(16) {
-    transform: translate(-40%, 20%) rotate(4deg);
-}
-
-.fancy:hover>.letter:nth-of-type(17) {
-    transform: translate(-10%, 60%) rotate(-6deg);
-}
-
-.fancy:hover>.letter:nth-of-type(18) {
-    transform: translate(0%, 8%) rotate(-8deg);
-}
-
-.fancy:hover>.letter:nth-of-type(19) {
-    transform: translate(0%, -20%) rotate(5deg);
-}
-
-.fancy:hover>.letter:nth-of-type(20) {
-    transform: translate(0%, 20%) rotate(-3deg);
-}
-
-.fancy:hover>.letter:nth-of-type(21) {
-    transform: translate(0%, -40%) rotate(-5deg);
-}
-
-.fancy:hover>.letter:nth-of-type(22) {
-    transform: translate(0%, 15%) rotate(10deg);
-}
-
-.fancy:hover>.letter:nth-of-type(23) {
-    transform: translate(0%, -50%) rotate(8deg);
-}
-
-.fancy:hover>.letter:nth-of-type(24) {
-    transform: translate(0%, 15%) rotate(-6deg);
-}
-
-.fancy:hover>.letter:nth-of-type(25) {
-    transform: translate(50%, -10%) rotate(-3deg);
-}
-
-.fancy:hover>.letter:nth-of-type(26) {
-    transform: translate(120%, -30%) rotate(-10deg);
-}
-
-.fancy:hover>.letter:nth-of-type(27) {
-    transform: translate(120%, 30%) rotate(10deg);
-}
-
-.fancy:hover>.letter:nth-of-type(28) {
-    transform: translate(120%, -30%) rotate(-10deg);
+.clients-logo:hover > path {
+    fill: #fe5115;
 }
