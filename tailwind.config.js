@@ -4,19 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#fe5115',
-        customWhite: '#e9eaec',
-        lightSecondary: '#febdb9'
-      },
-      
-      fontSize: {
-        35: '35px',
+        primary: '#4243dc',
+        secondary: '#1e1e1e',
+        lightGray: '#d2d2d2',
+        darkGray: '#929292',
+        customWhite: '#f6f6f6',
+        darkText: '#333333',
+        customPink: '#ef2469',
       },
 
-      maxWidth: {
-        10: '10rem',
-        70: '70rem',
-        60: '60rem',
+      fontSize: {
+        '10xl': '9rem',
       },
 
       width: {
@@ -25,6 +23,7 @@ module.exports = {
         15: '60px',
         17: '68px',
         100: '100px',
+        150: '150px',
         200: '200px',
         250: '250px',
         250: '250px',
@@ -51,25 +50,15 @@ module.exports = {
         500: '500px',
         600: '600px',
         700: '700px',
+        750: '750px',
         800: '800px',
         900: '900px',
         1000: '1000px',
       },
 
-      borderWidth: {
-        3: '3px',
-        5: '5px',
-        6: '6px',
-        7: '7px',
-      },
-
-      transitionDuration: {
-        400: '400ms',
-        450: '450ms',
-      },
-
-      transitionTimingFunction: {
-        customEase: 'cubic-bezier(0.87, 0, 0.13, 1)',
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
       }
     },
   },
